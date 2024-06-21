@@ -12,6 +12,6 @@
     background to represent my passion for the chaotic. The text is set in the 
     <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://rsms.me/inter/" target="_blank" rel="noreferrer noopener">Inter</a> 
     typeface. 
-    <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.flaticon.com/free-icon/boxing_8617929?related_id=8617804&origin=search" title="fighter icons">Fighter icons</a> 
+    <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.flaticon.com/free-icon/boxing_8617929?related_id=8617804&origin=search" target="_blank" rel="noreferrer noopener" title="fighter icons">Fighter icons</a> 
     created by Anggre Tionanda - Flaticon.
 </footer>
