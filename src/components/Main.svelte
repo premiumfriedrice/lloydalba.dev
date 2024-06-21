@@ -1,7 +1,7 @@
 <script>
-  import About from "./MainContents/About.Svelte";
-  import Experience from "./MainContents/Experience.svelte";
-  import Projects from "./MainContents/Projects.svelte";
+  import About from "./MainContents/About.svelte";
+  import Experience from "./MainContents/Experience.svelte"
+  import Projects from "./MainContents/Projects.svelte"
   import Footer from "./Footer.svelte"
 </script>
 
