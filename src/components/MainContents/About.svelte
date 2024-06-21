@@ -9,7 +9,7 @@
       <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.tamu.edu/index.html" target="_blank" rel="noreferrer noopener">Texas A&M University</a>.
     </p>
     <p class="mb-4">
-      I'm captivated by the power of data and algorithms to unlock the secrets of complex systems. My passion lies in exploring their potential across diverse fields: from predicting market trends in finance to unraveling the mysteries of the human brain through computational neuroscience, and uncovering groundbreaking insights in medical research. I'm driven by the belief that this work is not only fascinating but critically important.
+      Intrigued by the power of data and algorithms, I aim to unlock the secrets of complex systems. I'm passionate about their applications, from forecasting market trends in finance, to unraveling the mysteries of the human brain in computational neruoscience, and uncovering breakthroughs in medical research.
     </p>
     <p class="mb-4">
       2x SWE intern at a 
