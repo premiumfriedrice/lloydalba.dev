@@ -6,7 +6,7 @@
     styled with 
     <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://tailwindcss.com/" target="_blank" rel="noreferrer noopener">Tailwind CSS</a>, 
     and deployed with 
-    <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://pages.github.com/" target="_blank" rel="noreferrer noopener">Github Pages</a>.
+    <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://vercel.com/home" target="_blank" rel="noreferrer noopener">Vercel</a>.
     To give it my own touch, I added a 
     <a class="font-medium text-slate-400 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://vincentgarreau.com/particles.js/" target="_blank" rel="noreferrer noopener">particles.js</a> 
     background to represent my passion for the chaotic. The text is set in the 
