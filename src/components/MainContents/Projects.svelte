@@ -9,7 +9,7 @@
               'C++', 'Javascript', 'SvelteKit', 'Crow', 'TailwindCSS', 'Docker', 'Vercel'
             ],
           image: 'Black-Scholes Model Calculator',
-          imagepath: 'src/lib/images/bsmc.png'
+          imagepath: 'images/bsmc.png'
       },
       {
           name:'PFLPrototype',  
@@ -19,7 +19,7 @@
               'Python', 'Flask', 'Machine Learning', 'AWS', 'PyTorch'
             ],
           image: 'PFLPrototype',
-          imagepath: 'src/lib/images/PersonalWebsite.png'
+          imagepath: 'images/PersonalWebsite.png'
       },
       {
           name:'Surge New',  
@@ -29,7 +29,7 @@
               'Python', 'Terminal', 'CI/CD', 'Azure DevOps'
             ],
           image: 'Surge New',
-          imagepath: 'src/lib/images/surge_new.png'
+          imagepath: 'images/surge_new.png'
       }
   ]
 </script>
