@@ -17,6 +17,6 @@
       working on the platform engineering team, developing skills in building scalable software solutions.
     </p>
     <p class="mb-4">
-      When I'm not at the computer I'm usually being active, enjoying mediterranean food, spending time with family, or a combination of all three! 
+      When I'm not at the computer I'm usually training MMA, enjoying mediterranean food, spending time with family, or a combination of all three! 
     </p>
 </section>

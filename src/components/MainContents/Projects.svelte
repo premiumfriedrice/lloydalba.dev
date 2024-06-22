@@ -13,7 +13,7 @@
       },
       {
           name:'PFLPrototype',  
-          description:'Aim to help college students manage finances by using modelling.',
+          description:'Helping students manage their finances.',
           link:'https://github.com/premiumfriedrice/AlbaBank',
           skills: [
               'Python', 'Flask', 'Machine Learning', 'AWS', 'PyTorch'
