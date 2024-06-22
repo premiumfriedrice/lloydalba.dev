@@ -23,7 +23,7 @@
       },
       {
           name:'Surge New',  
-          description:'My project at Arrive: Reduced engineer workload by 1-2 developer days per sprint by constructing an Internal CLI Tool feature. Feature automated app creation, version control, and CI/CD resulting in a time savings of 14% per 2-week sprint cycle.',
+          description:'Streamlined project scaffolding by fully automating version control, REST-API .NET template app creation, and CI/CD pipelines.',
           link:'https://drive.google.com/file/d/1edXoUqSkoK6c2iI1yFhLrZH6O06cH8sG/view?usp=sharing',
           skills: [
               'Python', 'Terminal', 'CI/CD', 'Azure DevOps'

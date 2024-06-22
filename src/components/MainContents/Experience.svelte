@@ -8,7 +8,7 @@
                 name:'Arrive Logistics', 
                 link:'https://www.arrivelogistics.com/'
             }, 
-            description:'Modernized classic Azure DevOps pipelines from classic to YAML format',
+            description:'Migrated classic GUI Azure DevOps pipelines from classic to YAML-based pipelines as code.',
             skills:['Terraform', 'YAML', 'CI/CD', 'Terminal', 'Azure DevOps']
         },
         {
@@ -18,7 +18,7 @@
                 name:'Arrive Logistics', 
                 link:'https://www.arrivelogistics.com/'
             }, 
-            description:'Fully automated REST-API service template creation and deployment. Automated .NET app creation, azure devops repo creation, and CI/CD.',
+            description:'Developed an Internal CLI Tool feature that remains a crucial part of the company’s developer workflow, reducing engineer workload by 1-2 developer days per sprint and significantly improving development efficiency. Achieved a 14% reduction in development time resulting in $38,400 annual savings in engineer salary costs',
             skills:['Python', 'Automation', 'CI/CD', 'Terminal', 'Azure DevOps']
         }
     ]
