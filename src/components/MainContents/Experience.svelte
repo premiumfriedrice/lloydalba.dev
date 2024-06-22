@@ -18,7 +18,7 @@
                 name:'Arrive Logistics', 
                 link:'https://www.arrivelogistics.com/'
             }, 
-            description:'Developed an Internal CLI Tool feature that remains a crucial part of the company’s developer workflow, reducing engineer workload by 1-2 developer days per sprint and significantly improving development efficiency. Achieved a 14% reduction in development time resulting in $38,400 annual savings in engineer salary costs',
+            description:'Developed an Internal CLI Tool feature that remains a crucial part of the company’s developer workflow, reducing engineer workload by 1-2 developer days per sprint and significantly improving development efficiency. Achieved a 14% reduction in development time resulting in $38,400 annual savings in engineer salary costs.',
             skills:['Python', 'Automation', 'CI/CD', 'Terminal', 'Azure DevOps']
         }
     ]
