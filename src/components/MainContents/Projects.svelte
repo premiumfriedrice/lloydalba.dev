@@ -4,7 +4,7 @@
       {
           name:'Black-Scholes Model Calculator',  
           description:'Black-Scholes Model Calculator with a Black-Scholes Model C++ REST-API and SvelteKit front end.',
-          link:'https://github.com/premiumfriedrice/AlbaBank',
+          link:'https://github.com/premiumfriedrice/BlackScholesModelCalculator',
           skills: [
               'C++', 'Javascript', 'SvelteKit', 'Crow', 'TailwindCSS', 'Docker', 'Vercel'
             ],
