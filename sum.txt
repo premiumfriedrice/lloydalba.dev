@@ -1,0 +1,10 @@
+<script>
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 649) {
+        console.log('Experience')
+    }
+    console.log(window.scrollY);
+})
+</script>
+

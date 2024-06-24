@@ -14,7 +14,7 @@
       {
           name:'PFLPrototype',  
           description:'Helping students manage their finances.',
-          link:'https://github.com/premiumfriedrice/AlbaBank',
+          link:'https://github.com/premiumfriedrice/PFLPrototype',
           skills: [
               'Python', 'Flask', 'Machine Learning', 'AWS', 'PyTorch'
             ],
