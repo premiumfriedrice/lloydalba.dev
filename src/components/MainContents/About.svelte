@@ -9,7 +9,10 @@
       <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.tamu.edu/index.html" target="_blank" rel="noreferrer noopener">Texas A&M University</a>.
     </p>
     <p class="mb-4">
-      Intrigued by the power of data and algorithms, I aim to unlock the secrets of complex systems. I'm passionate about their applications, from forecasting market trends in finance, to unraveling the mysteries of the human brain in computational neruoscience, and uncovering breakthroughs in medical research.
+      Intrigued by the power of data and algorithms, I spend my time learning about their applications in finance, computational neuroscience, and  medical research. I think it's exciting and important work.
+    </p>
+    <p class="mb-4">
+      Currently, I'm working on a Black-Scholes Model Calculator with a C++ REST-API for the core calculations and a Svelte frontend, both containerized using Docker.
     </p>
     <p class="mb-4">
       2x SWE intern at a 
