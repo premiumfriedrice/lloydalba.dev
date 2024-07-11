@@ -22,9 +22,9 @@
           imagepath: 'images/PersonalWebsite.png'
       },
       {
-          name:'Surge New',  
+          name:'Surge New · Arrive Logistics',  
           description:'Streamlined project scaffolding by fully automating version control, REST-API .NET template app creation, and CI/CD pipelines.',
-          link:'https://drive.google.com/file/d/1edXoUqSkoK6c2iI1yFhLrZH6O06cH8sG/view?usp=sharing',
+          link:'https://drive.google.com/file/d/11D9j2wbfckiiUenRMl5at5TqRkMnPtzd/view?usp=sharing',
           skills: [
               'Python', 'Terminal', 'CI/CD', 'Azure DevOps'
             ],
