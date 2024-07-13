@@ -12,7 +12,7 @@
       Intrigued by the power of data and algorithms, I spend my time learning about their applications in finance, computational neuroscience, and  medical research. I think it's exciting and important work.
     </p>
     <p class="mb-4">
-      Currently, I'm working on a Black-Scholes Model Calculator with a C++ REST-API for the core calculations and a Svelte frontend, both containerized using Docker.
+      Currently, I'm working on a Black-Scholes Model Calculator with a C++ REST-API for the core calculations and a Svelte frontend.
     </p>
     <p class="mb-4">
       2x SWE intern at a 
@@ -20,6 +20,6 @@
       working on the platform engineering team, developing skills in building scalable software solutions.
     </p>
     <p class="mb-4">
-      When I'm not at the computer I'm usually training MMA, enjoying mediterranean food, spending time with family, or a combination of all three! 
+      When I'm not at the computer I'm usually training MMA, enjoying mediterranean food, spending time with family. 
     </p>
 </section>
