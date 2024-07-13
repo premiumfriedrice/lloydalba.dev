@@ -3,6 +3,7 @@
   import { inject } from '@vercel/analytics'
 </script>
   
+inject(); 
 <slot />
 <!-- 
 header
