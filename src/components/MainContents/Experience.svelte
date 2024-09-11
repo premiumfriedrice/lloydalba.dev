@@ -8,7 +8,7 @@
                 name:'Arrive Logistics', 
                 link:'https://www.arrivelogistics.com/'
             }, 
-            description:'Currently migrating classic GUI Azure DevOps pipelines to YAML-based pipelines as code. Collaborating with cross-functional teams to troubleshoot and resolve critical issues with microservices.',
+            description:'Migrated classic GUI Azure DevOps pipelines to YAML-based pipelines as code. Collaborated with SRE team to troubleshoot and resolve critical issues with microservices.',
             skills:['Terraform', 'YAML', 'CI/CD', 'Terminal', 'Azure DevOps']
         },
         {
