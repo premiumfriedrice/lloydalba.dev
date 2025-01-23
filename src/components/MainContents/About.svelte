@@ -4,7 +4,7 @@
     </div>
     <p class="mb-4">
       Class of 2027 
-      <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://engineering.tamu.edu/cse/academics/degrees/undergraduate/bs-cs.html" target="_blank" rel="noreferrer noopener">B.Sc. in Computer Science</a>
+      <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://engineering.tamu.edu/cse/academics/degrees/undergraduate/bs-ce.html" target="_blank" rel="noreferrer noopener">B.Sc. in Computer Engineering</a>
       at 
       <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.tamu.edu/index.html" target="_blank" rel="noreferrer noopener">Texas A&M University</a>.
     </p>
@@ -13,7 +13,7 @@
     </p>
 
     <p class="mb-4">
-      I’ve interned twice as a Software Engineer in platform engineering at a       <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.arrivelogistics.com/" target="_blank" rel="noreferrer noopener">major logistics company</a>.    </p>
+      I’ve interned twice as a Software Engineer in platform engineering at a <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.arrivelogistics.com/" target="_blank" rel="noreferrer noopener">major logistics company</a>.    </p>
 
     <p class="mb-4">
       In my free time, I enjoy learning Graphics Programming and designing performant code, aiming to create math visualizations using C++ and shaders.
