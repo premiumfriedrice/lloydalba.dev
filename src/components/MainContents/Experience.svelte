@@ -6,7 +6,7 @@
             position:'Game Engine Developer', 
             company:{
                 name:'Anvil Studio', 
-                link:'https://www.arrivelogistics.com/'
+                link:'https://under_construction'
             }, 
             description:'Heading development of engine render compatibility on macOS platform using Metal-cpp API and Metal Shading Language. Also designing an entity-component system and CLI tool.',
             skills:['C++', 'Metal-cpp', 'Metal Shading Language', 'Terminal', 'Python']
