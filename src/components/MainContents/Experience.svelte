@@ -5,7 +5,7 @@
             time:'Present', 
             position:'Game Engine Developer', 
             company:{
-                name:'Arrive Logistics', 
+                name:'Anvil Studio', 
                 link:'https://www.arrivelogistics.com/'
             }, 
             description:'Heading development of engine render compatibility on macOS platform using Metal-cpp API and Metal Shading Language. Also designing an entity-component system and CLI tool.',
