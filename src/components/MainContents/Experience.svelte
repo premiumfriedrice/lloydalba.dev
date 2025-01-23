@@ -2,6 +2,16 @@
     import ExpCard from "./SectionCards/ExpCard.svelte"
     let experiences = [
         {
+            time:'Present', 
+            position:'Game Engine Developer', 
+            company:{
+                name:'Arrive Logistics', 
+                link:'https://www.arrivelogistics.com/'
+            }, 
+            description:'Heading development of engine render compatibility on macOS platform using Metal-cpp API and Metal Shading Language. Also designing an entity-component system and CLI tool.',
+            skills:['C++', 'Metal-cpp', 'Metal Shading Language', 'Terminal', 'Python']
+        },
+        {
             time:'Summer 2024', 
             position:'Software Engineer Intern, Platform', 
             company:{
@@ -9,7 +19,7 @@
                 link:'https://www.arrivelogistics.com/'
             }, 
             description:'Migrated classic GUI Azure DevOps pipelines to YAML-based pipelines as code. Collaborated with SRE team to troubleshoot and resolve critical issues with microservices.',
-            skills:['Terraform', 'YAML', 'CI/CD', 'Terminal', 'Azure DevOps']
+            skills:['YAML', 'CI/CD', 'Terminal', 'Azure DevOps']
         },
         {
             time:'Summer 2023', 
@@ -20,7 +30,7 @@
             }, 
             description:'Developed an Internal CLI Tool feature that remains a crucial part of the company’s developer workflow, reducing engineer workload by 1-2 developer days per sprint and significantly improving development efficiency. Achieved a 14% reduction in development time resulting in $38,400 annual savings in engineer salary costs.',
             skills:['Python', 'Automation', 'CI/CD', 'Terminal', 'Azure DevOps']
-        }
+        },
     ]
 </script>
 

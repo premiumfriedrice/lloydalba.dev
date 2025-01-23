@@ -2,6 +2,26 @@
   import ProjCard from "./SectionCards/ProjCard.svelte"
   let projects = [
       {
+          name:'AE-CLI',  
+          description:'CLI tool for Anvil Game Engine. Manages depenencies and other tasks for game developers.',
+          link:'https://github.com/premiumfriedrice/PRIVATE',
+          skills: [
+              'Python', 'Terminal', 'Argeparse'
+            ],
+          image: 'Black-Scholes Model Calculator',
+          imagepath: 'images/Anvil.png'
+      },
+      {
+          name:'Anvil Game Engine',  
+          description:'Implementing an Entity-Component System.',
+          link:'https://github.com/premiumfriedrice/PRIVATE',
+          skills: [
+              'C++', 'Vulkan', 'Metal', 'MoltenVK'
+            ],
+          image: 'Black-Scholes Model Calculator',
+          imagepath: 'images/Anvil.png'
+      },
+      {
           name:'Black-Scholes Model Calculator',  
           description:'Black-Scholes Model Calculator with a Black-Scholes Model C++ REST-API and SvelteKit front end.',
           link:'https://github.com/premiumfriedrice/BlackScholesModelCalculator',
@@ -26,7 +46,7 @@
           description:'Internal CLI Tool feature that streamlined project scaffolding by fully automating version control, REST-API .NET template app creation, and CI/CD pipelines. Achieved a 14% reduction in development time resulting in $38,400 annual savings in engineer salary costs.',
           link:'https://drive.google.com/file/d/11D9j2wbfckiiUenRMl5at5TqRkMnPtzd/view?usp=sharing',
           skills: [
-              'Python', 'Terminal', 'CI/CD', 'Azure DevOps'
+              'Python', 'Terminal', 'CI/CD', 'Azure DevOps', 'Argeparse'
             ],
           image: 'Surge New',
           imagepath: 'images/surge_new.png'

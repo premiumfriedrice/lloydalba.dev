@@ -9,17 +9,17 @@
       <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.tamu.edu/index.html" target="_blank" rel="noreferrer noopener">Texas A&M University</a>.
     </p>
     <p class="mb-4">
-      Intrigued by the power of data and algorithms, I spend my time learning about their applications in finance, computational neuroscience, and  medical research. I think it's exciting and important work.
+      I am currently a Game Engine Developer at Anvil Studio. 
     </p>
+
     <p class="mb-4">
-      Currently, I'm working on a Black-Scholes Model Calculator with a C++ REST-API for the core calculations and a Svelte frontend.
+      I’ve interned twice as a Software Engineer in platform engineering at a       <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.arrivelogistics.com/" target="_blank" rel="noreferrer noopener">major logistics company</a>.    </p>
+
+    <p class="mb-4">
+      In my free time, I enjoy learning Graphics Programming and designing performant code, aiming to create math visualizations using C++ and shaders.
     </p>
+
     <p class="mb-4">
-      2x SWE intern at a 
-      <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.arrivelogistics.com/" target="_blank" rel="noreferrer noopener">major logistics company</a>
-      working on the platform engineering team, developing skills in building scalable software solutions.
-    </p>
-    <p class="mb-4">
-      When I'm not at the computer I'm usually training MMA, enjoying mediterranean food, spending time with family. 
+      When I'm not at the computer I'm usually training MMA, enjoying mediterranean food, or spending time with family. 
     </p>
 </section>
