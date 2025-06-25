@@ -3,6 +3,16 @@
     let experiences = [
         {
             time:'Present', 
+            position:'Software Engineer Intern, Platform', 
+            company:{
+                name:'Arrive Logistics', 
+                link:'https://www.arrivelogistics.com/'
+            }, 
+            description:'Reconfigured Azure Kubernetes Service states.',
+            skills:['Terraform', 'HCL', 'CI/CD', 'Terminal', 'Azure DevOps', 'Python']
+        },
+        {
+            time:'Present', 
             position:'Game Engine Developer', 
             company:{
                 name:'Anvil Studio', 

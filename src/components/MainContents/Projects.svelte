@@ -2,14 +2,14 @@
   import ProjCard from "./SectionCards/ProjCard.svelte"
   let projects = [
       {
-          name:'AE-CLI',  
-          description:'CLI tool for Anvil Game Engine. Manages depenencies and other tasks for game developers.',
-          link:'https://github.com/premiumfriedrice/PRIVATE',
+          name:'findMoto 🏍️',  
+          description:'Facebook Marketplace webscraper tailored for finding best motorcycle deals.',
+          link:'https://github.com/amasud7/findMoto',
           skills: [
               'Python', 'Terminal', 'Argeparse'
             ],
           image: 'Black-Scholes Model Calculator',
-          imagepath: 'images/Anvil.png'
+          imagepath: 'images/findMoto_demo.gif'
       },
       {
           name:'Anvil Game Engine',  
