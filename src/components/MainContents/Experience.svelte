@@ -2,7 +2,7 @@
     import ExpCard from "./SectionCards/ExpCard.svelte"
     let experiences = [
         {
-            time:'Present', 
+            time:'Summer 2025', 
             position:'Software Engineer Intern, Platform', 
             company:{
                 name:'Arrive Logistics', 
@@ -11,16 +11,16 @@
             description:'Reconfigured Azure Kubernetes Service states.',
             skills:['Terraform', 'HCL', 'CI/CD', 'Terminal', 'Azure DevOps', 'Python']
         },
-        {
-            time:'Present', 
-            position:'Game Engine Developer', 
-            company:{
-                name:'Anvil Studio', 
-                link:'https://under_construction'
-            }, 
-            description:'Heading development of engine render compatibility on macOS platform using Metal-cpp API and Metal Shading Language. Also designing an entity-component system and CLI tool.',
-            skills:['C++', 'Metal-cpp', 'Metal Shading Language', 'Terminal', 'Python']
-        },
+        // {
+        //     time:'Present', 
+        //     position:'Game Engine Developer', 
+        //     company:{
+        //         name:'Anvil Studio', 
+        //         link:'https://under_construction'
+        //     }, 
+        //     description:'Heading development of engine render compatibility on macOS platform using Metal-cpp API and Metal Shading Language. Also designing an entity-component system and CLI tool.',
+        //     skills:['C++', 'Metal-cpp', 'Metal Shading Language', 'Terminal', 'Python']
+        // },
         {
             time:'Summer 2024', 
             position:'Software Engineer Intern, Platform', 
