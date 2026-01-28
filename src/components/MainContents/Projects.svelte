@@ -11,36 +11,36 @@
           image: 'Black-Scholes Model Calculator',
           imagepath: 'images/findMoto_demo.gif'
       },
-      {
-          name:'Anvil Game Engine',  
-          description:'Implementing an Entity-Component System.',
-          link:'https://github.com/premiumfriedrice/PRIVATE',
-          skills: [
-              'C++', 'Vulkan', 'Metal', 'MoltenVK'
-            ],
-          image: 'Black-Scholes Model Calculator',
-          imagepath: 'images/Anvil.png'
-      },
-      {
-          name:'Black-Scholes Model Calculator',  
-          description:'Black-Scholes Model Calculator with a Black-Scholes Model C++ REST-API and SvelteKit front end.',
-          link:'https://github.com/premiumfriedrice/BlackScholesModelCalculator',
-          skills: [
-              'C++', 'Javascript', 'SvelteKit', 'Crow', 'TailwindCSS', 'Docker'
-            ],
-          image: 'Black-Scholes Model Calculator',
-          imagepath: 'images/bsmc.png'
-      },
-      {
-          name:'PFLPrototype',  
-          description:'Helping students manage their finances.',
-          link:'https://github.com/premiumfriedrice/PFLPrototype',
-          skills: [
-              'Python', 'Flask', 'Machine Learning', 'AWS', 'PyTorch'
-            ],
-          image: 'PFLPrototype',
-          imagepath: 'images/PersonalWebsite.png'
-      },
+    //   {
+    //       name:'Anvil Game Engine',  
+    //       description:'Implementing an Entity-Component System.',
+    //       link:'https://github.com/premiumfriedrice/PRIVATE',
+    //       skills: [
+    //           'C++', 'Vulkan', 'Metal', 'MoltenVK'
+    //         ],
+    //       image: 'Black-Scholes Model Calculator',
+    //       imagepath: 'images/Anvil.png'
+    //   },
+    //   {
+    //       name:'Black-Scholes Model Calculator',  
+    //       description:'Black-Scholes Model Calculator with a Black-Scholes Model C++ REST-API and SvelteKit front end.',
+    //       link:'https://github.com/premiumfriedrice/BlackScholesModelCalculator',
+    //       skills: [
+    //           'C++', 'Javascript', 'SvelteKit', 'Crow', 'TailwindCSS', 'Docker'
+    //         ],
+    //       image: 'Black-Scholes Model Calculator',
+    //       imagepath: 'images/bsmc.png'
+    //   },
+    //   {
+    //       name:'PFLPrototype',  
+    //       description:'Helping students manage their finances.',
+    //       link:'https://github.com/premiumfriedrice/PFLPrototype',
+    //       skills: [
+    //           'Python', 'Flask', 'Machine Learning', 'AWS', 'PyTorch'
+    //         ],
+    //       image: 'PFLPrototype',
+    //       imagepath: 'images/PersonalWebsite.png'
+    //   },
       {
           name:'Surge New · Arrive Logistics',  
           description:'Internal CLI Tool feature that streamlined project scaffolding by fully automating version control, REST-API .NET template app creation, and CI/CD pipelines. Achieved a 14% reduction in development time resulting in $38,400 annual savings in engineer salary costs.',
