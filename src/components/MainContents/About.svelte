@@ -10,7 +10,7 @@
     </p>
 
     <p class="mb-4">
-      3x as a Software Engineer in platform engineering at a <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.arrivelogistics.com/" target="_blank" rel="noreferrer noopener">major logistics company</a>.    </p>
+      3x Software Engineer Intern on the Platform Engineering team at a <a class="font-medium text-slate-100 hover:text-cyan-300 focus-visible:text-cyan-300" href="https://www.arrivelogistics.com/" target="_blank" rel="noreferrer noopener">major logistics company</a>.    </p>
 
     <p class="mb-4">
       3x Hackathon Winner
