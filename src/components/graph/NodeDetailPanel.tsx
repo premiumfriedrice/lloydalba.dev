@@ -81,7 +81,7 @@ export default function NodeDetailPanel({
               className="fixed bottom-0 left-0 right-0 z-50 bg-neutral-950 border-t border-white/[0.06] rounded-t-2xl max-h-[70vh] overflow-y-auto"
             >
               <div className="sticky top-0 bg-neutral-950 pt-3 pb-2 flex justify-center z-10">
-                <GripHorizontal size={20} className="text-neutral-600" />
+                <GripHorizontal size={20} className="text-neutral-400" />
               </div>
               <PanelContent
                 activeNode={activeNode}
@@ -123,13 +123,13 @@ export default function NodeDetailPanel({
                 <h3 className="text-white font-medium text-sm">
                   {activeNode.label}
                 </h3>
-                <span className="text-[11px] text-neutral-500 tracking-wider uppercase">
+                <span className="text-[11px] text-neutral-400 tracking-wider uppercase">
                   {TYPE_LABELS[activeNode.type]}
                 </span>
               </div>
               <button
                 onClick={onClose}
-                className="text-neutral-500 hover:text-white transition-colors p-1"
+                className="text-neutral-400 hover:text-white transition-colors p-1"
               >
                 <X size={14} />
               </button>
@@ -151,7 +151,7 @@ export default function NodeDetailPanel({
           animate={{ opacity: 1 }}
           className="w-[380px] flex-shrink-0 border border-white/[0.04] rounded-lg flex items-center justify-center"
         >
-          <p className="text-xs text-neutral-600 text-center px-8">
+          <p className="text-xs text-neutral-400 text-center px-8">
             Click a node to explore its details and connections
           </p>
         </motion.div>
@@ -192,7 +192,7 @@ function PanelContent({
         <h3 className="text-white font-medium text-sm">
           {activeNode.label}
         </h3>
-        <span className="text-[11px] text-neutral-500 tracking-wider uppercase">
+        <span className="text-[11px] text-neutral-400 tracking-wider uppercase">
           {TYPE_LABELS[activeNode.type]}
         </span>
       </div>
@@ -212,9 +212,9 @@ function PanelContent({
       {/* Years indicator */}
       {activeNode.since && years > 0 && (
         <div>
-          <div className="flex items-center gap-2 text-[11px] text-neutral-500">
+          <div className="flex items-center gap-2 text-[11px] text-neutral-400">
             <span>Since {activeNode.since}</span>
-            <span className="text-neutral-700">&middot;</span>
+            <span className="text-neutral-400">&middot;</span>
             <span className="text-[#c4b5fd]">
               {years} year{years !== 1 ? "s" : ""}
             </span>
@@ -235,7 +235,7 @@ function PanelContent({
       {content?.bullets && content.bullets.length > 0 && (
         <div className="space-y-2">
           {content.bullets.map((bullet, i) => (
-            <p key={i} className="text-[12px] text-neutral-500 leading-relaxed pl-3 border-l border-white/[0.06]">
+            <p key={i} className="text-[12px] text-neutral-400 leading-relaxed pl-3 border-l border-white/[0.06]">
               {bullet}
             </p>
           ))}
@@ -245,7 +245,7 @@ function PanelContent({
       {/* Skills */}
       {content?.skills && content.skills.length > 0 && (
         <div>
-          <p className="text-[11px] text-neutral-500 tracking-wider uppercase mb-2">
+          <p className="text-[11px] text-neutral-400 tracking-wider uppercase mb-2">
             Skills
           </p>
           <div className="flex flex-wrap gap-1.5">
@@ -264,7 +264,7 @@ function PanelContent({
       {/* Connected nodes */}
       {connectedNodes.length > 0 && (
         <div>
-          <p className="text-[11px] text-neutral-500 tracking-wider uppercase mb-2">
+          <p className="text-[11px] text-neutral-400 tracking-wider uppercase mb-2">
             Connected to
           </p>
           <div className="flex flex-wrap gap-1.5">
@@ -291,7 +291,7 @@ function PanelContent({
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[11px] text-neutral-500 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
+              className="inline-flex items-center gap-1.5 text-[11px] text-neutral-400 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
             >
               <ExternalLink size={12} /> {link.label}
             </a>
@@ -303,7 +303,7 @@ function PanelContent({
       {graphNode.detailHref && (
         <Link
           href={graphNode.detailHref}
-          className="inline-flex items-center gap-1.5 text-[11px] text-neutral-500 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase pt-1"
+          className="inline-flex items-center gap-1.5 text-[11px] text-neutral-400 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase pt-1"
         >
           View full page <ArrowRight size={12} />
         </Link>

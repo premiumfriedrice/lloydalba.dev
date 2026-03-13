@@ -14,7 +14,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-white/[0.04]">
+    <nav className="sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex items-center h-12">
           {navLinks.map((link) => {
@@ -24,10 +24,10 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative flex items-center gap-2 px-4 py-2 text-[11px] tracking-widest uppercase transition-colors ${
+                className={`relative overflow-hidden flex items-center gap-2 px-4 py-2 text-[11px] tracking-widest uppercase transition-colors backdrop-blur-sm bg-black/20 ${
                   isActive
                     ? "text-[#c4b5fd]"
-                    : "text-neutral-500 hover:text-white"
+                    : "text-neutral-400 hover:text-white"
                 }`}
               >
                 <Icon size={14} strokeWidth={1.5} />
@@ -35,7 +35,7 @@ export default function Nav() {
                 {isActive && (
                   <motion.div
                     layoutId="tab-indicator"
-                    className="absolute bottom-0 left-2 right-2 h-[2px]"
+                    className="absolute bottom-0 left-0 right-0 h-[2px]"
                     style={{
                       background: "linear-gradient(to right, #c4b5fd, #e06c75)",
                     }}

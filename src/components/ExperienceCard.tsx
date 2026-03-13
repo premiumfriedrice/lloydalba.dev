@@ -6,7 +6,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
       {/* Timeline dot */}
       <div className="absolute left-[3px] top-1.5 w-[9px] h-[9px] border border-neutral-700 bg-black group-hover:border-[#c4b5fd] transition-colors" />
 
-      <p className="text-[11px] text-neutral-500 tracking-wider uppercase mb-2">
+      <p className="text-[11px] text-neutral-400 tracking-wider uppercase mb-2">
         {exp.time}
       </p>
       <h3 className="text-white text-sm font-medium mb-0.5">{exp.position}</h3>
@@ -24,7 +24,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
       )}
       <ul className="mt-3 space-y-2">
         {exp.bullets.map((bullet, i) => (
-          <li key={i} className="text-sm leading-relaxed text-neutral-500 pl-3 relative before:content-['—'] before:absolute before:left-0 before:text-neutral-700">
+          <li key={i} className="text-sm leading-relaxed text-neutral-400 pl-3 relative before:content-['-'] before:absolute before:left-0 before:text-neutral-400">
             {bullet}
           </li>
         ))}
@@ -33,7 +33,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
         {exp.skills.map((skill) => (
           <span
             key={skill}
-            className="text-[11px] px-2 py-0.5 border border-white/[0.06] text-neutral-500 tracking-wide"
+            className="text-[11px] px-2 py-0.5 border border-white/[0.06] text-neutral-400 tracking-wide"
           >
             {skill}
           </span>

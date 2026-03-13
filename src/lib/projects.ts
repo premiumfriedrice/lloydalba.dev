@@ -26,6 +26,7 @@ export const projects: Project[] = [
     description:
       "Fully featured habit & task tracking iOS app as an alternative to subscription-based productivity tools. Custom UI/UX design philosophy iterated through 5+ design revisions.",
     skills: ["Swift", "SwiftUI"],
+    githubRepo: "premiumfriedrice/ima",
     startDate: "2025-01-01",
     featured: true,
   },

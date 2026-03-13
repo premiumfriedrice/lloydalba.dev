@@ -36,6 +36,13 @@ export const FILTER_GROUPS: { id: FilterGroup; label: string }[] = [
 ];
 
 export const SUB_FILTERS: Record<string, SubFilter[]> = {
+  all: [
+    { id: "type-domain", label: "Domain", color: "#c4b5fd" },
+    { id: "type-project", label: "Project", color: "#e8e4e0" },
+    { id: "type-experience", label: "Professional", color: "#e06c75" },
+    { id: "type-skill", label: "Skill", color: "#8b8b8b" },
+    { id: "type-achievement", label: "Achievement", color: "#d19a66" },
+  ],
   context: [
     { id: "ctx-professional", label: "Professional", color: "#e06c75" },
     { id: "ctx-hackathons", label: "Hackathons", color: "#d19a66" },
@@ -110,7 +117,7 @@ export const nodes: ZettelNode[] = [
   { id: "ima", label: "ima", type: "project", subtitle: "iOS habit & task tracker", description: "Fully featured habit & task tracking iOS app as an alternative to subscription-based productivity tools. Custom UI/UX iterated through 5+ design revisions.", detailHref: "/projects/ima" },
   { id: "lloydalba-dev", label: "lloydalba.dev", type: "project", subtitle: "Personal portfolio", description: "This site. Built with Next.js, TypeScript, and Tailwind CSS. Features an interactive knowledge graph, thoughts feed, and live GitHub data.", detailHref: "/projects/lloydalba-dev", links: [{ label: "GitHub", url: "https://github.com/premiumfriedrice/lloydalba.dev" }] },
   { id: "findmoto", label: "findMoto", type: "project", subtitle: "Motorcycle deal finder", description: "Facebook Marketplace webscraper tailored for finding best motorcycle deals.", detailHref: "/projects/findmoto", links: [{ label: "GitHub", url: "https://github.com/amasud7/findMoto" }] },
-  { id: "surge-new", label: "Surge New", type: "project", subtitle: "Internal CLI tool", description: "Automated project scaffolding — version control, .NET template creation, and CI/CD pipelines. Achieved 14% reduction in dev time, $38.4K annual savings.", detailHref: "/projects/surge-new", links: [{ label: "Demo", url: "https://drive.google.com/file/d/11D9j2wbfckiiUenRMl5at5TqRkMnPtzd/view?usp=sharing" }] },
+  { id: "surge-new", label: "Surge New", type: "project", subtitle: "Internal CLI tool", description: "Automated project scaffolding - version control, .NET template creation, and CI/CD pipelines. Achieved 14% reduction in dev time, $38.4K annual savings.", detailHref: "/projects/surge-new", links: [{ label: "Demo", url: "https://drive.google.com/file/d/11D9j2wbfckiiUenRMl5at5TqRkMnPtzd/view?usp=sharing" }] },
 
   // Experiences
   { id: "arrive-25", label: "Arrive '25", type: "experience", subtitle: "SWE Intern, Platform", description: "Modernized company-wide services, built fault-tolerant telemetry, and engineered reusable Terraform modules for Azure resource governance.", links: [{ label: "Company", url: "https://www.arrivelogistics.com/" }] },
@@ -138,9 +145,9 @@ export const nodes: ZettelNode[] = [
   { id: "tailwind", label: "Tailwind CSS", type: "skill", since: 2024, subtitle: "Utility-first CSS", description: "Styling web interfaces with Tailwind's utility-first approach." },
 
   // Achievements
-  { id: "tamuhack-26", label: "TAMUHack '26 — 1st", type: "achievement", subtitle: "1st Place Overall", description: "Won first place at TAMUHack 2026 against 650+ competitors." },
-  { id: "build4good-25", label: "Build4Good '25 — 1st", type: "achievement", subtitle: "1st Place Notion-API", description: "Won first place in the Notion API category at Texas A&M Computing Society Build4Good 2025." },
-  { id: "tamuhack-25", label: "TAMUHack '25 — 2nd", type: "achievement", subtitle: "2nd Place arm-challenge", description: "Placed second in the ARM challenge at TAMUHack 2025." },
+  { id: "tamuhack-26", label: "TAMUHack '26 - 1st", type: "achievement", subtitle: "1st Place Overall", description: "Won first place at TAMUHack 2026 against 650+ competitors." },
+  { id: "build4good-25", label: "Build4Good '25 - 1st", type: "achievement", subtitle: "1st Place Notion-API", description: "Won first place in the Notion API category at Texas A&M Computing Society Build4Good 2025." },
+  { id: "tamuhack-25", label: "TAMUHack '25 - 2nd", type: "achievement", subtitle: "2nd Place arm-challenge", description: "Placed second in the ARM challenge at TAMUHack 2025." },
 ];
 
 export const edges: ZettelEdge[] = [
@@ -235,6 +242,19 @@ export function getConnectedIds(nodeId: string): Set<string> {
 }
 
 export function getClusterIds(subFilterId: string): Set<string> {
+  // Handle type-based filters (e.g. "type-domain", "type-skill")
+  if (subFilterId.startsWith("type-")) {
+    const nodeType = subFilterId.replace("type-", "") as NodeType;
+    const typeIds = nodes.filter((n) => n.type === nodeType).map((n) => n.id);
+    const primary = new Set(typeIds);
+    const expanded = new Set(primary);
+    for (const e of edges) {
+      if (primary.has(e.source)) expanded.add(e.target);
+      if (primary.has(e.target)) expanded.add(e.source);
+    }
+    return expanded;
+  }
+
   const primaryIds = CLUSTER_MAP[subFilterId];
   if (!primaryIds) return new Set(nodes.map((n) => n.id));
 

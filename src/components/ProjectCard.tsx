@@ -54,17 +54,17 @@ export default function ProjectCard({ project, githubData, activeSlug }: Props) 
           {!isActive && (
             <ArrowUpRight
               size={16}
-              className="text-neutral-700 group-hover:text-[#c4b5fd] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all mt-1 flex-shrink-0"
+              className="text-neutral-400 group-hover:text-[#c4b5fd] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all mt-1 flex-shrink-0"
             />
           )}
         </div>
 
-        <p className="text-sm leading-relaxed line-clamp-2 text-neutral-500 mb-4">
+        <p className="text-sm leading-relaxed line-clamp-2 text-neutral-400 mb-4">
           {project.description}
         </p>
 
         {githubData?.pushed_at && (
-          <p className="text-[11px] text-neutral-600 tracking-wide mb-4">
+          <p className="text-[11px] text-neutral-400 tracking-wide mb-4">
             pushed{" "}
             {formatDistanceToNow(new Date(githubData.pushed_at), {
               addSuffix: true,
@@ -91,7 +91,7 @@ export default function ProjectCard({ project, githubData, activeSlug }: Props) 
                 .map(([lang, bytes]) => (
                   <span
                     key={lang}
-                    className="flex items-center gap-1.5 text-[11px] text-neutral-500"
+                    className="flex items-center gap-1.5 text-[11px] text-neutral-400"
                   >
                     <span
                       className="inline-block w-1.5 h-1.5 rounded-full"
@@ -108,7 +108,7 @@ export default function ProjectCard({ project, githubData, activeSlug }: Props) 
           {project.skills.map((skill) => (
             <span
               key={skill}
-              className="text-[11px] px-2 py-0.5 border border-white/[0.06] text-neutral-500 tracking-wide"
+              className="text-[11px] px-2 py-0.5 border border-white/[0.06] text-neutral-400 tracking-wide"
             >
               {skill}
             </span>

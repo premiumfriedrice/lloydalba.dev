@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import FlowField from "@/components/FlowField";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -12,7 +13,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lloyd Alba — Software Engineer",
+  title: "Lloyd Alba - Software Engineer",
   description:
     "Software Engineer portfolio. Always learning. Built with Next.js and TypeScript.",
   icons: {
@@ -28,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${dmSans.variable} font-[family-name:var(--font-dm-sans)] antialiased bg-black text-neutral-500 min-h-screen`}
+        className={`${dmSans.variable} font-[family-name:var(--font-dm-sans)] antialiased bg-black text-neutral-400 min-h-screen`}
       >
+        <FlowField particleCount={300} speed={0.5} trailOpacity={0.18} />
         <div className="relative z-10 flex flex-col min-h-screen">
           <Nav />
           <main className="flex-1">{children}</main>

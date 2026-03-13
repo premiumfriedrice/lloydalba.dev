@@ -39,7 +39,7 @@ export default async function GitHubHeatmap({
           ))}
         </div>
       </div>
-      <p className="text-[11px] text-neutral-600 tracking-wide">
+      <p className="text-[11px] text-neutral-400 tracking-wide">
         {totalContributions.toLocaleString()} contributions in the last year
       </p>
     </div>

@@ -154,7 +154,7 @@ body::after {
 }
 
 .thought-content ul {
-  list-style-type: "— ";
+  list-style-type: "- ";
 }
 
 .thought-content ol {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { edges as graphEdges, getConnectedIds, getClusterIds } from "@/lib/zettelkasten";
 import type { FilterGroup } from "@/lib/zettelkasten";
 import {
@@ -25,6 +25,9 @@ interface GraphCanvasProps {
   onPointerDown: (nodeId: string, e: React.PointerEvent) => void;
   onPointerMove: (e: React.PointerEvent) => void;
   onPointerUp: () => void;
+  onWheel: (e: WheelEvent) => void;
+  zoom: number;
+  pan: { x: number; y: number };
   svgRef: React.RefObject<SVGSVGElement | null>;
 }
 
@@ -43,8 +46,22 @@ export default function GraphCanvas({
   onPointerDown,
   onPointerMove,
   onPointerUp,
+  onWheel,
+  zoom,
+  pan,
   svgRef,
 }: GraphCanvasProps) {
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const handler = (e: WheelEvent) => {
+      e.preventDefault();
+      onWheel(e);
+    };
+    svg.addEventListener("wheel", handler, { passive: false });
+    return () => svg.removeEventListener("wheel", handler);
+  }, [svgRef, onWheel]);
+
   const highlightedIds = activeId ? getConnectedIds(activeId) : null;
   const nodeMap = new Map(simNodes.map((n) => [n.id, n]));
 
@@ -83,6 +100,7 @@ export default function GraphCanvas({
           </linearGradient>
         </defs>
 
+        <g transform={`translate(${pan.x}, ${pan.y}) scale(${zoom})`}>
         {/* Edges */}
         {graphEdges.map((edge, i) => {
           const s = nodeMap.get(edge.source);
@@ -207,6 +225,7 @@ export default function GraphCanvas({
             </g>
           );
         })}
+        </g>
       </svg>
     </div>
   );

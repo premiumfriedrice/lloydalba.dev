@@ -32,7 +32,7 @@ export default function FilterBar({
             className={`px-3 py-1.5 text-[11px] tracking-widest uppercase border transition-all ${
               filterGroup === g.id
                 ? "border-[#c4b5fd]/40 text-[#c4b5fd] bg-[#c4b5fd]/5"
-                : "border-white/[0.06] text-neutral-500 hover:text-white hover:border-white/[0.12]"
+                : "border-white/[0.06] text-neutral-400 hover:text-white hover:border-white/[0.12]"
             }`}
           >
             {g.label}
@@ -40,7 +40,7 @@ export default function FilterBar({
         ))}
         <button
           onClick={onToggleListView}
-          className="ml-auto p-1.5 border border-white/[0.06] text-neutral-500 hover:text-white hover:border-white/[0.12] transition-all md:hidden"
+          className="ml-auto p-1.5 border border-white/[0.06] text-neutral-400 hover:text-white hover:border-white/[0.12] transition-all md:hidden"
           aria-label={listView ? "Graph view" : "List view"}
         >
           {listView ? <Network size={14} /> : <List size={14} />}
@@ -49,6 +49,16 @@ export default function FilterBar({
 
       {currentSubFilters.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-4">
+          <button
+            onClick={() => onSubFilterChange(null)}
+            className={`px-3 py-1.5 text-[11px] tracking-widest uppercase border transition-all ${
+              subFilter === null
+                ? "border-[#c4b5fd]/40 text-[#c4b5fd] bg-[#c4b5fd]/5"
+                : "border-white/[0.06] text-neutral-400 hover:text-white hover:border-white/[0.12]"
+            }`}
+          >
+            All
+          </button>
           {currentSubFilters.map((sf) => (
             <button
               key={sf.id}
@@ -56,7 +66,7 @@ export default function FilterBar({
               className={`px-3 py-1.5 text-[11px] tracking-widest uppercase border transition-all ${
                 subFilter === sf.id
                   ? "bg-white/[0.03]"
-                  : "border-white/[0.06] text-neutral-500 hover:text-white hover:border-white/[0.12]"
+                  : "border-white/[0.06] text-neutral-400 hover:text-white hover:border-white/[0.12]"
               }`}
               style={
                 subFilter === sf.id

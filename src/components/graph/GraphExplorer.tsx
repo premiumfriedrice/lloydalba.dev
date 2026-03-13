@@ -45,6 +45,8 @@ export default function GraphExplorer() {
   const [listView, setListView] = useState(false);
   const [dimensions, setDimensions] = useState({ width: DEFAULT_WIDTH, height: DEFAULT_HEIGHT });
   const [isMobile, setIsMobile] = useState(false);
+  const [zoom, setZoom] = useState(1);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
 
   const simRef = useRef<SimNode[]>([]);
   const rafRef = useRef(0);
@@ -63,7 +65,7 @@ export default function GraphExplorer() {
       for (const entry of entries) {
         const { width } = entry.contentRect;
         if (width > 0) {
-          const h = Math.max(350, Math.min(600, width * 0.65));
+          const h = Math.max(350, Math.min(750, width * 0.7));
           setDimensions({ width, height: h });
         }
       }
@@ -182,6 +184,21 @@ export default function GraphExplorer() {
     startSimulation(SETTLE_FRAMES);
   }, [startSimulation]);
 
+  const handleWheel = useCallback((e: WheelEvent) => {
+    const { x: cursorX, y: cursorY } = screenToSVG(e.clientX, e.clientY);
+
+    const delta = -e.deltaY * 0.001;
+    setZoom((prevZoom) => {
+      const newZoom = Math.min(3, Math.max(0.5, prevZoom + delta * prevZoom));
+      const scale = newZoom / prevZoom;
+      setPan((prevPan) => ({
+        x: cursorX - scale * (cursorX - prevPan.x),
+        y: cursorY - scale * (cursorY - prevPan.y),
+      }));
+      return newZoom;
+    });
+  }, [screenToSVG]);
+
   const activeId = selectedId || hoveredId;
 
   const visibleIds = useMemo(() => {
@@ -237,6 +254,9 @@ export default function GraphExplorer() {
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
+            onWheel={handleWheel}
+            zoom={zoom}
+            pan={pan}
             svgRef={svgRef}
           />
 

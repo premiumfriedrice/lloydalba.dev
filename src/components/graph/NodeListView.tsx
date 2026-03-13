@@ -42,7 +42,7 @@ export default function NodeListView({
         if (!nodes || nodes.length === 0) return null;
         return (
           <div key={type} className="p-4">
-            <p className="text-[11px] text-neutral-500 tracking-wider uppercase mb-3">
+            <p className="text-[11px] text-neutral-400 tracking-wider uppercase mb-3">
               {TYPE_LABELS[type]}
             </p>
             <div className="flex flex-wrap gap-2">

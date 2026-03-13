@@ -13,7 +13,7 @@ import { Trophy } from "lucide-react";
 import { fetchGitHubRepo } from "@/lib/github";
 
 export const metadata: Metadata = {
-  title: "About — Lloyd Alba",
+  title: "About - Lloyd Alba",
   description: "Software Engineer portfolio. Projects, experience, and thoughts.",
 };
 
@@ -36,7 +36,7 @@ export default async function AboutPage() {
       {/* Hero */}
       <section className="pt-24 pb-20 md:pt-36 md:pb-28">
         <div className="animate-fade-up">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6 backdrop-blur-sm bg-black/20 rounded-lg inline-block px-3 py-1">
             Lloyd Alba<span className="text-[#c4b5fd]">.</span>
           </h1>
         </div>
@@ -77,7 +77,7 @@ export default async function AboutPage() {
               href={s.href}
               target={s.label !== "Email" ? "_blank" : undefined}
               rel={s.label !== "Email" ? "noopener noreferrer" : undefined}
-              className="text-neutral-500 hover:text-white transition-colors"
+              className="text-neutral-400 hover:text-white transition-colors"
               aria-label={s.label}
             >
               <s.icon size={18} strokeWidth={1.5} />
@@ -88,7 +88,7 @@ export default async function AboutPage() {
 
       {/* Projects */}
       <section id="projects" className="pb-20 scroll-mt-20 animate-fade-up delay-4">
-        <h2 className="section-heading text-sm font-bold text-white tracking-widest uppercase mb-10">
+        <h2 className="section-heading text-sm font-bold text-white tracking-widest uppercase mb-10 backdrop-blur-sm bg-black/20 rounded-md inline-block px-2 py-1">
           Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/[0.03]">
@@ -108,7 +108,7 @@ export default async function AboutPage() {
 
       {/* Experience */}
       <section id="experience" className="pb-20 scroll-mt-20 animate-fade-up delay-5">
-        <h2 className="section-heading text-sm font-bold text-white tracking-widest uppercase mb-10">
+        <h2 className="section-heading text-sm font-bold text-white tracking-widest uppercase mb-10 backdrop-blur-sm bg-black/20 rounded-md inline-block px-2 py-1">
           Experience
         </h2>
         <div className="mb-12">
@@ -119,7 +119,7 @@ export default async function AboutPage() {
 
         {/* Education */}
         <div className="border border-white/[0.06] p-6 md:p-8">
-          <p className="text-[11px] text-neutral-500 tracking-wider uppercase mb-2">
+          <p className="text-[11px] text-neutral-400 tracking-wider uppercase mb-2">
             {education.time}
           </p>
           <h3 className="text-white text-sm font-medium mb-0.5">
@@ -146,7 +146,7 @@ export default async function AboutPage() {
                 <Trophy size={14} className="text-[#e06c75] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-white font-medium">{a.title}</p>
-                  <p className="text-xs text-neutral-500">{a.event}</p>
+                  <p className="text-xs text-neutral-400">{a.event}</p>
                 </div>
               </div>
             ))}
@@ -158,7 +158,7 @@ export default async function AboutPage() {
             href="/documents/LloydAlba_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-neutral-500 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
+            className="text-xs text-neutral-400 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
           >
             View full resume &rarr;
           </a>
@@ -168,7 +168,7 @@ export default async function AboutPage() {
       {/* Thoughts */}
       {thoughts.length > 0 && (
         <section id="thoughts" className="pb-20 scroll-mt-20 animate-fade-up delay-6">
-          <h2 className="section-heading text-sm font-bold text-white tracking-widest uppercase mb-10">
+          <h2 className="section-heading text-sm font-bold text-white tracking-widest uppercase mb-10 backdrop-blur-sm bg-black/20 rounded-md inline-block px-2 py-1">
             Thoughts
           </h2>
           <div className="space-y-[1px] bg-white/[0.03]">

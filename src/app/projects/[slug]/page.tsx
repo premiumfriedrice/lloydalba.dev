@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Not Found" };
   return {
-    title: `${project.name} — Lloyd Alba`,
+    title: `${project.name} - Lloyd Alba`,
     description: project.description,
   };
 }
@@ -60,7 +60,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     <div className="max-w-6xl mx-auto px-6 lg:px-8 pt-16 md:pt-24">
       <Link
         href="/about#projects"
-        className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-[#c4b5fd] transition-colors mb-12 tracking-wider uppercase"
+        className="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-[#c4b5fd] transition-colors mb-12 tracking-wider uppercase"
       >
         <ArrowLeft size={14} /> Back
       </Link>
@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* Main content */}
         <div className="flex-1 animate-fade-up">
           <div className="flex items-center gap-4 mb-2">
-            <p className="text-xs tracking-[0.3em] uppercase text-neutral-500">
+            <p className="text-xs tracking-[0.3em] uppercase text-neutral-400">
               Project
             </p>
             {isActive && (
@@ -99,7 +99,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 href={githubData.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-neutral-500 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
+                className="inline-flex items-center gap-2 text-xs text-neutral-400 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
               >
                 <Github size={14} strokeWidth={1.5} /> Repo
               </a>
@@ -109,7 +109,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 href={project.externalLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-neutral-500 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
+                className="inline-flex items-center gap-2 text-xs text-neutral-400 hover:text-[#c4b5fd] transition-colors tracking-wider uppercase"
               >
                 <ExternalLink size={14} strokeWidth={1.5} /> Demo
               </a>
@@ -135,7 +135,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 GitHub
               </h3>
               {githubData.pushed_at && (
-                <p className="text-[11px] text-neutral-500 tracking-wide mb-4">
+                <p className="text-[11px] text-neutral-400 tracking-wide mb-4">
                   pushed{" "}
                   {formatDistanceToNow(new Date(githubData.pushed_at), {
                     addSuffix: true,
@@ -162,7 +162,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                       ([lang, bytes]) => (
                         <span
                           key={lang}
-                          className="flex items-center gap-1.5 text-[11px] text-neutral-500"
+                          className="flex items-center gap-1.5 text-[11px] text-neutral-400"
                         >
                           <span
                             className="inline-block w-2 h-2 rounded-full"

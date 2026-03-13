@@ -10,7 +10,7 @@ export default function ThoughtCard({ thought }: { thought: Thought }) {
     <article className="bg-black p-6 md:p-8 group">
       <div className="flex items-start gap-6">
         <div className="hidden sm:block pt-1.5">
-          <time className="text-[11px] text-neutral-500 tracking-wider tabular-nums whitespace-nowrap">
+          <time className="text-[11px] text-neutral-400 tracking-wider tabular-nums whitespace-nowrap">
             {thought.date
               ? format(new Date(thought.date), "MMM dd")
               : ""}
@@ -19,7 +19,7 @@ export default function ThoughtCard({ thought }: { thought: Thought }) {
 
         <div className="min-w-0 flex-1">
           <div className="sm:hidden mb-2">
-            <time className="text-[11px] text-neutral-500 tracking-wider">
+            <time className="text-[11px] text-neutral-400 tracking-wider">
               {thought.date
                 ? format(new Date(thought.date), "MMM d, yyyy")
                 : ""}
@@ -52,7 +52,7 @@ export default function ThoughtCard({ thought }: { thought: Thought }) {
                 ) : (
                   <span
                     key={tag}
-                    className="text-[11px] px-2 py-0.5 border border-white/[0.06] text-neutral-500 tracking-wide"
+                    className="text-[11px] px-2 py-0.5 border border-white/[0.06] text-neutral-400 tracking-wide"
                   >
                     {tag}
                   </span>
