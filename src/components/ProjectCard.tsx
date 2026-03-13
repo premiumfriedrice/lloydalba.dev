@@ -31,7 +31,7 @@ export default function ProjectCard({ project, githubData, activeSlug }: Props) 
   return (
     <Link href={`/projects/${project.slug}`} className="block group">
       <div
-        className={`relative bg-black border p-6 md:p-8 transition-all h-full ${
+        className={`relative backdrop-blur-sm bg-black/20 border p-6 md:p-8 transition-all h-full ${
           isActive
             ? "card-active"
             : "border-white/[0.06] card-hover"

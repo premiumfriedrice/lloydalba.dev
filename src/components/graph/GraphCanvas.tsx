@@ -66,7 +66,7 @@ export default function GraphCanvas({
   const nodeMap = new Map(simNodes.map((n) => [n.id, n]));
 
   return (
-    <div className="border border-white/[0.04] bg-black overflow-hidden rounded-lg flex-1 min-h-0">
+    <div className="border border-white/[0.04] backdrop-blur-sm bg-black/20 overflow-hidden rounded-lg flex-1 min-h-0">
       <svg
         ref={svgRef}
         viewBox={`0 0 ${width} ${height}`}
