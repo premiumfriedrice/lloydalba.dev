@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #000000;
+  --color-foreground: #a8a8a8;
+  --color-accent: #c4b5fd;
+  --color-accent-red: #e06c75;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Dot grid background texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Noise grain overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+::selection {
+  background-color: #c4b5fd;
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
+
+/* Staggered entrance animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease both;
+}
+
+.animate-slide-in {
+  animation: slide-in-left 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+/* Section header accent line */
+.section-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, #c4b5fd, #e06c75, transparent);
+}
+
+/* Thought prose styles */
+.thought-content p {
+  margin-bottom: 0.75rem;
+}
+
+.thought-content a {
+  color: #c4b5fd;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196, 181, 253, 0.3);
+  transition: border-color 0.2s;
+}
+
+.thought-content a:hover {
+  border-color: #c4b5fd;
+}
+
+.thought-content code {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.thought-content ul,
+.thought-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.thought-content ul {
+  list-style-type: "— ";
+}
+
+.thought-content ol {
+  list-style-type: decimal;
+}
+
+.thought-content blockquote {
+  border-left: 2px solid;
+  border-image: linear-gradient(to bottom, #c4b5fd, #e06c75) 1;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #d4d4d4;
+  font-style: italic;
+}
+
+/* Card hover glow */
+.card-hover {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.card-hover:hover {
+  border-color: rgba(196, 181, 253, 0.2);
+  box-shadow: 0 0 0 1px rgba(196, 181, 253, 0.06), 0 0 20px rgba(224, 108, 117, 0.04), inset 0 0 20px rgba(196, 181, 253, 0.02);
+}
+
+/* Active card glow */
+.card-active {
+  border-color: rgba(196, 181, 253, 0.35) !important;
+  box-shadow: 0 0 24px rgba(196, 181, 253, 0.08), 0 0 32px rgba(224, 108, 117, 0.05), 0 0 0 1px rgba(196, 181, 253, 0.15);
+}
+
+/* Timeline line */
+.timeline-line {
+  position: relative;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 24px;
+  bottom: -24px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(196, 181, 253, 0.15), rgba(224, 108, 117, 0.05), transparent);
+}
+
+.timeline-line:last-child::before {
+  display: none;
+}
