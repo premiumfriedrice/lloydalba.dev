@@ -6,11 +6,10 @@ import { formatDistanceToNow } from "date-fns";
 interface Props {
   project: Project;
   githubData?: GitHubRepoData | null;
-  activeSlug?: string;
+  isActive?: boolean;
 }
 
-export default function ProjectCard({ project, githubData, activeSlug }: Props) {
-  const isActive = activeSlug === project.slug;
+export default function ProjectCard({ project, githubData, isActive }: Props) {
 
   const totalBytes = githubData?.languages
     ? Object.values(githubData.languages).reduce((a, b) => a + b, 0)

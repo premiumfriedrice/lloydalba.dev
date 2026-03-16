@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import ThoughtCard from "@/components/ThoughtCard";
 import { getAllThoughts } from "@/lib/thoughts";
-import { getActiveStatus } from "@/lib/status";
+import { getActiveStatus, getActiveSlugs } from "@/lib/status";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
 import { projects } from "@/lib/projects";
 import { experiences, education, achievements } from "@/lib/experience";
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const [thoughts, status] = await Promise.all([
+  const [thoughts, status, activeSlugs] = await Promise.all([
     getAllThoughts(),
     getActiveStatus(),
+    getActiveSlugs(),
   ]);
-  const activeSlug = status.slug;
 
   const githubDataMap = await Promise.all(
     projects.map(async (p) => ({
@@ -30,6 +30,14 @@ export default async function AboutPage() {
       data: p.githubRepo ? await fetchGitHubRepo(p.githubRepo) : null,
     }))
   );
+
+  const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const activeProjects = projects.filter((p) => {
+    if (!p.githubRepo) return true;
+    const ghData = githubDataMap.find((d) => d.slug === p.slug)?.data;
+    if (!ghData) return false;
+    return new Date(ghData.pushed_at) >= oneWeekAgo;
+  });
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -42,7 +50,7 @@ export default async function AboutPage() {
         </div>
 
         <div className="animate-fade-up delay-2 mb-8">
-          <StatusIndicator activeSlug={activeSlug} pushedAt={status.pushedAt} />
+          <StatusIndicator activeSlug={status.slug} pushedAt={status.pushedAt} />
         </div>
 
         <div className="animate-fade-up delay-3 mb-10">
@@ -92,14 +100,14 @@ export default async function AboutPage() {
           Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/[0.03]">
-          {projects.map((project) => {
+          {activeProjects.map((project) => {
             const ghData = githubDataMap.find((d) => d.slug === project.slug);
             return (
               <ProjectCard
                 key={project.slug}
                 project={project}
                 githubData={ghData?.data}
-                activeSlug={activeSlug}
+                isActive={activeSlugs.has(project.slug)}
               />
             );
           })}

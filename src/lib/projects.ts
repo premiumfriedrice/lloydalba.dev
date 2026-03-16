@@ -31,6 +31,36 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "ars",
+    name: "ARS",
+    description:
+      "Applicant recruitment stats platform for tracking and analyzing recruitment data.",
+    skills: ["TypeScript"],
+    githubRepo: "premiumfriedrice/ARS",
+    startDate: "2026-01-01",
+    featured: true,
+  },
+  {
+    slug: "cortex-ios",
+    name: "Cortex",
+    description:
+      "Full SwiftUI iOS app for the Cortex project.",
+    skills: ["Swift", "SwiftUI"],
+    githubRepo: "premiumfriedrice/CortexiOSApp",
+    startDate: "2025-01-01",
+    featured: true,
+  },
+  {
+    slug: "wavepoint",
+    name: "WavePoint",
+    description:
+      "Simple wave point project built with Swift.",
+    skills: ["Swift"],
+    githubRepo: "premiumfriedrice/WavePointProject",
+    startDate: "2025-01-01",
+    featured: true,
+  },
+  {
     slug: "lloydalba-dev",
     name: "lloydalba.dev",
     description:

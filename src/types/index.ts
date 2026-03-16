@@ -55,4 +55,5 @@ export interface GitHubRepoData {
   languages: Record<string, number>;
   stargazers_count: number;
   forks_count: number;
+  private: boolean;
 }

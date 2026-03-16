@@ -11,9 +11,10 @@ export default function StatusIndicator({ activeSlug, pushedAt }: Props) {
   const project = getProjectBySlug(activeSlug);
   if (!project) return null;
 
-  const timeAgo = pushedAt
-    ? formatDistanceToNow(new Date(pushedAt), { addSuffix: true })
-    : null;
+  const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  if (!pushedAt || new Date(pushedAt) < oneWeekAgo) return null;
+
+  const timeAgo = formatDistanceToNow(new Date(pushedAt), { addSuffix: true });
 
   return (
     <Link
@@ -29,9 +30,7 @@ export default function StatusIndicator({ activeSlug, pushedAt }: Props) {
         <span className="text-[#c4b5fd] group-hover:text-[#d4c8fe] transition-colors">
           {project.name}
         </span>
-        {timeAgo && (
-          <span className="text-neutral-400"> · {timeAgo}</span>
-        )}
+        <span className="text-neutral-400"> · {timeAgo}</span>
       </span>
     </Link>
   );
